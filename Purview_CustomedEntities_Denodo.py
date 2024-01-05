@@ -9,7 +9,7 @@ Created on Thu Dec 21 11:42:00 2023
 
 ############################## Credentials 
 """
-I stored my credentials in external file ... you can whatever authentication method that suits your environment or IDE
+I stored my credentials in external file ... you can use whatever authentication method that suits your environment or IDE
 for authentication methods, visit: https://learn.microsoft.com/en-us/dotnet/azure/sdk/authentication/local-development-service-principal?tabs=azure-portal%2Cwindows%2Ccommand-line
 I used (ClientSecretCredential)
 """
@@ -117,7 +117,7 @@ Below is a complex udf that does the following:
 
 """
 
-###### X last step before change 
+###### UDF & Upload
 
 
 
