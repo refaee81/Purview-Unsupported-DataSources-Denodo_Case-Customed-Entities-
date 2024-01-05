@@ -6,11 +6,15 @@ This solution is designed and implemented for the purpose of enabling purview sc
 2. Building a Denodo Customed Data Source and/or a Denodo Collection in Purivew.
 3. Buidling up Denodo Entities, Schemas, and Heirarchies in Purview.  
 
+Note: Screenshots have been adjusted to remove names of assets. 
 ![image](https://github.com/refaee81/Purview_ScanUnsupportedDataSource-Denodo_Case-/assets/48224520/7f083d96-3fb9-41f9-ae35-2ac66e39731c)
+
 
 ![image](https://github.com/refaee81/Purview_ScanUnsupportedDataSource-Denodo_Case-/assets/48224520/8d70249f-55e7-45f6-8cb4-cf4c5de5ed64)
 
+
 ![image](https://github.com/refaee81/Purview_ScanUnsupportedDataSource-Denodo_Case-/assets/48224520/95490c60-4768-452e-8b06-49a48c743c77)
+
 
 ![image](https://github.com/refaee81/Purview_ScanUnsupportedDataSource-Denodo_Case-/assets/48224520/8e76846d-0835-4595-a212-d2f989a6533b)
 
