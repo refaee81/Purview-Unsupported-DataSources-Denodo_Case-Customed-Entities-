@@ -1,29 +1,24 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 22 14:56:57 2023
-
-@author: abdera
-"""
 
 # -*- coding: utf-8 -*-
 """
 Created on Thu Dec 21 11:42:00 2023
 
 @author: abdera
+
+
+This is an example of authentication file used for the work 
+
 """
-#Ref: https://github.com/Ludwinic1/purviewautomation
-#pip install purviewautomation
 
 
-tenant_id = "d4167d58-713e-4e8f-8ba2-869b5491fb80"
-client_id = "29a0dcca-e5c6-4dfd-9bac-740e5c0fcf14"
-scope_name = "kv-001-secrets"
-client_secret_secret_name = "app-dap-purview-dev"
-# tenant_id_secret_name = "..."
-# client_id_secret_name = "..."
+tenant_id = "xxxxx-xxx-xxx-xx-xxxxxx"
+client_id = "xxxxx-xxx-xxx-xx-xxxxxx"
+scope_name = "xxxxx-xxx-xxx-xx-xxxxxx"
+client_secret_secret_name = "xxxxx-xxx-xxx-xx-xxxxxx"
+
  
 ## Microsoft Purview
-data_catalog_name = "pview-dap-dev-001"  # Purview Account Name
+data_catalog_name = "xxxxx-xxx-xxx-xx-xxxxxx"  # Purview Account Name
 
 from pyapacheatlas.auth import ServicePrincipalAuthentication
 from pyapacheatlas.core import PurviewClient
@@ -33,17 +28,17 @@ import os
 Endpoint = f"https://{data_catalog_name}.purview.azure.com"
 resource_url = "https://purview.azure.net"
  
-client_secret = "c345828a-0bae-4973-b9dc-372398abe3ae"
+client_secret = "xxxxx-xxx-xxx-xx-xxxxxx"
 
 from pyapacheatlas.auth import ServicePrincipalAuthentication
 from pyapacheatlas.core import PurviewClient
 import json
 import os
 
-clientSecret = "Utd8Q~-zg0f2g3qVSCQK.SVhktn1kKLdXmqkhaZy"
+clientSecret = "xxxxx-xxx-xxx-xx-xxxxxx"
 
 auth = ServicePrincipalAuthentication(
-    client_id='29a0dcca-e5c6-4dfd-9bac-740e5c0fcf14', client_secret=clientSecret, tenant_id='d4167d58-713e-4e8f-8ba2-869b5491fb80'
+    client_id="xxxxx-xxx-xxx-xx-xxxxxx", client_secret=clientSecret, tenant_id="xxxxx-xxx-xxx-xx-xxxxxx"
 )
 
 
@@ -93,9 +88,7 @@ purview_client = purview_auth(tenant_id, client_id, clientSecret, data_catalog_n
 
 
 ##################################################
-client_id = '29a0dcca-e5c6-4dfd-9bac-740e5c0fcf14'
-client_secret = "Utd8Q~-zg0f2g3qVSCQK.SVhktn1kKLdXmqkhaZy"
-tenant_id = 'd4167d58-713e-4e8f-8ba2-869b5491fb80'
+
 
 from purviewautomation import (ServicePrincipalAuthentication,
                                 PurviewCollections)
@@ -110,8 +103,8 @@ Colclient = PurviewCollections(purview_account_name="pview-dap-dev-001",
 ###################################################
 
 
-denodoserver_uid = "abdera"
-denodoserver_pwd = "991090Ramzi!!"
+denodoserver_uid = "xxxxx-xxx-xxx-xx-xxxxxx"
+denodoserver_pwd = "xxxxx-xxx-xxx-xx-xxxxxx"
 
 
 
