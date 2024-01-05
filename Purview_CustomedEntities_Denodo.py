@@ -15,7 +15,7 @@ I used (ClientSecretCredential)
 """
 
 
-exec(open(r'C:\Users\abdera\Documents\EDC\MDM\Python API\Purview API\spn.py').read())
+exec(open(r'path to \spn.py').read())
 
 
 ############################ Libraries 
@@ -50,11 +50,11 @@ from pyapacheatlas.readers import ExcelConfiguration, ExcelReader
 
 import psycopg2 as dbdriver
 from socket import gethostname
-denodoserver_name = "denododataservicesppr.edc.ca"
-denodoserver_odbc_port = "9996"
-denodoserver_database = "admin"
-denodoserver_uid = denodoserver_uid
-denodoserver_pwd = denodoserver_pwd
+denodoserver_name = "xxxxx-xxx-xxx-xx-xxxxxx"
+denodoserver_odbc_port = "xxxxx-xxx-xxx-xx-xxxxxx"
+denodoserver_database = "xxxxx-xxx-xxx-xx-xxxxxx"
+denodoserver_uid = "xxxxx-xxx-xxx-xx-xxxxxx"
+denodoserver_pwd = "xxxxx-xxx-xxx-xx-xxxxxx"
 
 ## Create the useragent as the concatenation of
 ## the client hostname and the python library used
@@ -122,7 +122,7 @@ Below is a complex udf that does the following:
 
 
 def denodo_collections(df):
-    exec(open(r'C:\Users\abdera\Documents\EDC\MDM\Python API\Purview API\spn.py').read())
+
 
     tables=df.view_name.unique()  ### break it into multiple dataframes of each table/view
     dfs=[]
@@ -162,7 +162,7 @@ def denodo_collections(df):
         dfs.append(df_i)
         for i, df_i in enumerate(dfs):
             
-            file_path = "C:/Users/abdera/Documents/EDC/MDM/Python API/extracts/demo_bulk_entities_upload2.xlsx"
+            file_path = "C:/Users/..../demo_bulk_entities_upload2.xlsx"
             writer = pd.ExcelWriter(file_path, engine='xlsxwriter')
             df_i.to_excel(writer, sheet_name='BulkEntities', index=False)
             writer.close()
@@ -183,7 +183,7 @@ def denodo_collections(df):
                 Collection_List = Colclient.list_collections()
                 z = next((item for item in Collection_List if item["friendlyName"] == df_i['name'][0]), None)
                 collectionid = z['name']
-                url = 'https://pview-dap-dev-001.purview.azure.com/datamap/api/entity/moveTo?collectionId='+collectionid+'&api-version=2023-09-01'
+                url = 'https://{purview catalog name}.purview.azure.com/datamap/api/entity/moveTo?collectionId='+collectionid+'&api-version=2023-09-01'
                 headers = {
                             'Authorization': f'Bearer {azuread_access_token}',
                             'Content-Type': 'application/json'
@@ -202,7 +202,7 @@ CATALOG_METADATA_VIEWS30 = [CATALOG_METADATA_VIEWS[i:i+n] for i in range(0,len(C
 x = 0 
 for x in range(len(CATALOG_METADATA_VIEWS30)):
     denodo_collections(CATALOG_METADATA_VIEWS30[x])
-    exec(open(r'C:\Users\abdera\Documents\EDC\MDM\Python API\Purview API\spn.py').read())
+    exec(open(r'C:\Users\.......\spn.py').read())
     x +=1
 
     
