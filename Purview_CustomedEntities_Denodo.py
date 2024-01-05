@@ -15,7 +15,7 @@ I used (ClientSecretCredential)
 """
 
 
-exec(open(r'path to \spn.py').read())
+exec(open(r'C:\....... \spn.py').read())
 
 
 ############################ Libraries 
