@@ -3,8 +3,8 @@ This solution is designed and implemented for the purpose of enabling purview sc
 
 # The solution entails three main processes: 
 1. Query Denodo Catalog and building up Catalog Views DataFrame.
-2. Building a Denodo Customed Data Source and/or a Denodo Collection in Purivew.
-3. Buidling up Denodo Entities, Schemas, and Heirarchies in Purview.  
+2. Building a Denodo Customed Data Source and/or a Denodo Collection in Purivew using REST API.
+3. Buidling up Denodo Entities, Schemas, and Heirarchies in Purview using REST API.  
 
 
 ![image](https://github.com/refaee81/Purview_ScanUnsupportedDataSource-Denodo_Case-/assets/48224520/7f083d96-3fb9-41f9-ae35-2ac66e39731c)
