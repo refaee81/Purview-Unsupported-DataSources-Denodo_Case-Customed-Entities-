@@ -6,6 +6,16 @@ This solution is designed and implemented for the purpose of enabling purview sc
 2. Building a Denodo Customed Data Source and/or a Denodo Collection in Purivew using REST API.
 3. Buidling up Denodo Entities, Schemas, and Heirarchies in Purview using REST API.  
 
+# The Python Script works as follows:
+1. Reads the unique names of Denodo tables and creates a list for them. 
+2. Sets a qualifiedName for each asset of Denodo by concatenating asset name, type and schema. The qualifiedNames are crucial for building up relationships and heirarchies in Purview.
+3. Loop the creation of qualifiedName, typeName, and asset type (db2 in this case) for each dataset by creating a data frame and appending eventually all data frames in a list of dataframes. 
+4. Storing the data of appended dataframe in a temporary file that has the "upload template" structure, and then uploading the entities individually. The temp file stores and deletes for each step (dataframe) causing no storage or capacity issues.
+5. loop the creation of a collection based on the unique denodo data set under the parent collection "Denodo" using the collectionId. 
+6. For each collection, upload and dump the entities to build up the right heirarchy. 
+7. To avoid the expiration of the access token (3600 / 1 hr), I break down the Catalog dataframe into batches of 200 entities, and run authentication at each batch. 
+
+# Sample Results (Output) of Denodo Collection & Entities:
 
 ![image](https://github.com/refaee81/Purview_ScanUnsupportedDataSource-Denodo_Case-/assets/48224520/7f083d96-3fb9-41f9-ae35-2ac66e39731c)
 
