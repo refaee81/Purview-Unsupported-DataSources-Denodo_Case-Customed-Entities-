@@ -120,8 +120,8 @@ Below is a complex udf that does the following:
 ###### UDF & Upload
 
 
-
-def denodo_collections(df):
+def main():
+#def denodo_collections(df):
 
 
     tables=df.view_name.unique()  ### break it into multiple dataframes of each table/view
@@ -193,8 +193,12 @@ def denodo_collections(df):
     
                                         }) 
                 response = requests.request("POST", url, headers=headers, data=payload, timeout=None, verify=False)  
-                
-#### Batch   
+
+if __name__ == "__main__":
+    main()
+       
+#### Test Batching
+"""
 n = 200 #rows
 CATALOG_METADATA_VIEWS30 = [CATALOG_METADATA_VIEWS[i:i+n] for i in range(0,len(CATALOG_METADATA_VIEWS),n)]
 
@@ -204,7 +208,7 @@ for x in range(len(CATALOG_METADATA_VIEWS30)):
     denodo_collections(CATALOG_METADATA_VIEWS30[x])
     exec(open(r'C:\Users\.......\spn.py').read())
     x +=1
-
+"""
     
     
 
